@@ -4,33 +4,12 @@
 *.mod
 *.lo
 *.la
-.libs
-.deps
 *.pc
-stamp-*
-.dirstamp
-.autotools
 .cproject
 .project
 .settings/*
 
 Makefile
-Makefile.in
-aclocal.m4
-am
-autom4te.cache
-config.*
-configure
-compile
-depcomp
-dependencies.m4
-install-sh
-libtool
-ltmain.sh
-m4/libtool.m4
-m4/lt*.m4
-missing
-ar-lib
 tutorials/tutorial[1-4]
 opmcore-config.cmake
 
