@@ -1,4 +1,9 @@
 This is the "cmake" branch of opm-core. Its purpose is to use CMake instead of
 Autotools as building system. It should be viewed as an experimental branch, and
-is not (yet) suitable to use as a base for further development of the C++ code,
-nor to link other modules against.
+is not (yet) suitable to use as a base for further development of the C++ code.
+
+The following features are deliberately disabled:
+
+* ERT           (uses -std=gnu99, must write probe for that first)
+* AGMG          (uses Fortran compiler, must search for source code)
+* installation  (premature)
