@@ -6,4 +6,10 @@ The following features are deliberately disabled:
 
 * ERT           (uses -std=gnu99, must write probe for that first)
 * AGMG          (uses Fortran compiler, must search for source code)
-* installation  (premature)
+* Documentation
+
+cmake ../../src/opm-core -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug
+ionice -c2 -n7 nice make -j \
+  $(echo "("$(grep -P -c '^processor\t:' /proc/cpuinfo)+1")"/1 | bc)
+
+Notice that a very simple form of 'configure' also works.
