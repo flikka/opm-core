@@ -1,15 +1,24 @@
-This is the "cmake" branch of opm-core. Its purpose is to use CMake instead of
-Autotools as building system. It should be viewed as an experimental branch, and
-is not (yet) suitable to use as a base for further development of the C++ code.
+* This is the "cmake" branch of opm-core. Its purpose is to use CMake instead of
+  Autotools as building system. It should be viewed as an experimental branch, and
+  is not (yet) suitable to use as a base for further development of the C++ code.
 
-The following features are deliberately disabled:
+* Please do not push changes to this branch.
 
-* ERT           (uses -std=gnu99, must write probe for that first)
-* AGMG          (uses Fortran compiler, must search for source code)
-* Documentation
+* The following features are deliberately disabled:
 
-cmake ../../src/opm-core -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug
-ionice -c2 -n7 nice make -j \
-  $(echo "("$(grep -P -c '^processor\t:' /proc/cpuinfo)+1")"/1 | bc)
+** ERT integration
+** Documentation using Doxygen
 
-Notice that a very simple form of 'configure' also works.
+* If you want to try out this branch together with the latest changes in the main
+  branch, do this:
+
+  git clone -b cmake http://github.com/OPM/opm-core opm-core-cmake
+  pushd opm-core-cmake
+  git pull --strategy=ours origin master
+
+* Steps to build using CMake:
+
+  cmake ../../src/opm-core -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug
+  ../../src/opm-core/build
+
+* Notice that a very simple form of 'configure' also works.
