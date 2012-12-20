@@ -2,12 +2,14 @@
   Autotools as building system. It should be viewed as an experimental branch, and
   is not (yet) suitable to use as a base for further development of the C++ code.
 
-* Please do not push changes to this branch.
+* Please do not push changes to this branch as there are several changes locally
+  in the patch queue. Instead, make a pull request on GitHub.
 
-* The following features are deliberately disabled:
+* If you build the library as a shared object on a 64-bit Linux platform, then
+  ERT should be built using the option -DSHARED_LIB:BOOL=ON
 
-** ERT integration
-** Documentation using Doxygen
+* Documentation is not built by default; if you want to build it, use the
+  command "make doc". (The "build" script can also be used in this manner)
 
 * If you want to try out this branch together with the latest changes in the main
   branch, do this:
@@ -18,7 +20,11 @@
 
 * Steps to build using CMake:
 
-  cmake ../../src/opm-core -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug
-  ../../src/opm-core/build
+  cmake ../../src/opm-core -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug && \
+  make
 
-* Notice that a very simple form of 'configure' also works.
+* Notice that a very simple form of 'configure' also works. Use `configure --help`
+  to see available options. A faster version of the above commands is:
+
+  ../../src/opm-core/configure --prefix=/usr/local && \
+  ../../src/opm-core/build
