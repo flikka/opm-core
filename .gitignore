@@ -16,3 +16,5 @@ opm-core-install.cmake
 Makefile
 bin/
 lib/
+Doxyfile
+Documentation
