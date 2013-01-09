@@ -23,6 +23,9 @@
   cmake ../../src/opm-core -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug && \
   make
 
+* In particular, you must set CMAKE_BUILD_TYPE when running CMake, to enable
+  debugging within QtCreator.
+
 * Notice that a very simple form of 'configure' also works. Use `configure --help`
   to see available options. A faster version of the above commands is:
 
