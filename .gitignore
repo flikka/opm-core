@@ -4,7 +4,7 @@
 .\#*\#
 
 # QtCreator project settings
-CMakeLists.txt.user
+CMakeLists.txt.user*
 
 # in-tree build with CMake
 CMakeCache.txt
