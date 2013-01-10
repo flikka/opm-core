@@ -8,8 +8,10 @@
 * If you build the library as a shared object on a 64-bit Linux platform, then
   ERT should be built using the option -DSHARED_LIB:BOOL=ON
 
-* Documentation is not built by default; if you want to build it, use the
-  command "make doc". (The "build" script can also be used in this manner)
+* Documentation and tests are not built by default; if you want to build it, use
+  the commands "make doc" and "make tests" respectively. (The "build" script can
+  also be used in this manner). Building these components will take significantly
+  longer time than just the library.
 
 * If you want to try out this branch together with the latest changes in the main
   branch, do this:
