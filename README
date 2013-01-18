@@ -24,7 +24,7 @@
 * If you plan to add your own commits, then you should create them in a feature
   branch, which is branched off the merged CMake branch:
 
-  git checkout -b feature cmake-merge
+  git checkout -b feature-cmake cmake-merge
 
   If you now want to get updates from the CMake branch into your feature branch,
   you can do this:
@@ -32,11 +32,17 @@
   git checkout cmake-merge
   git fetch origin
   git merge origin/cmake
-  git checkout features
+  git checkout feature-cmake
   git rebase --preserve-merges cmake-merge
 
   You can do the same with the master branch, but add --strategy=ours to the
   merge command (like above), to avoid needless merge conflicts.
+
+  To create patches to send to others, you should apply them on the master branch:
+
+  git checkout master
+  git checkout -b feature master
+  git cherry-pick cmake-merge..feature-cmake
 
 * Steps to build using CMake:
 
