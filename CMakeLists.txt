@@ -3,7 +3,7 @@
 cmake_minimum_required (VERSION 2.8)
 project (opm-core)
 set (opm-core_VERSION_MAJOR 2013)
-set (opm-core_VERSION_MINOR 2)
+set (opm-core_VERSION_MINOR 02)
 enable_language (C)
 enable_language (CXX)
 
