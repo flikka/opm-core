@@ -247,7 +247,7 @@ foreach (_hdr IN LISTS opmcore_HEADERS)
 	file (RELATIVE_PATH _rel_dir "${PROJECT_SOURCE_DIR}" "${_dir}")
 	install (
 		FILES ${_hdr}
-		DESTINATION include${_rel_dir}
+		DESTINATION include/${_rel_dir}
 		)
 endforeach (_hdr)
 install (
