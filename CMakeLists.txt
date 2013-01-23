@@ -2,8 +2,8 @@
 # vim: set filetype=cmake autoindent tabstop=2 shiftwidth=2 noexpandtab softtabstop=2 nowrap:
 cmake_minimum_required (VERSION 2.8)
 project (opm-core)
-set (opm-core_VERSION_MAJOR 2013)
-set (opm-core_VERSION_MINOR 02)
+set (opm-core_VERSION_MAJOR 1)
+set (opm-core_VERSION_MINOR 0)
 enable_language (C)
 enable_language (CXX)
 
