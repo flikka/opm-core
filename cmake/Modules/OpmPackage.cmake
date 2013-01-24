@@ -159,7 +159,6 @@ function (find_opm_package module deps header lib defs prog conf)
 
   # write status message in the same manner as everyone else
   include (FindPackageHandleStandardArgs)
-  set (_req_vars "${${module}_INCLUDE_DIR}")
   if ("${lib}" STREQUAL "")
 	set (_lib_var "")
   else ("${lib}" STREQUAL "")
