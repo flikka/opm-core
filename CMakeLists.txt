@@ -121,6 +121,7 @@ if (NOT dune-istl_FOUND)
 endif (NOT dune-istl_FOUND)
 if (NOT SuiteSparse_FOUND)
 	list (REMOVE_ITEM opmcore_SOURCES
+		${PROJECT_SOURCE_DIR}/opm/core/linalg/call_umfpack.c
 		${PROJECT_SOURCE_DIR}/opm/core/linalg/LinearSolverUmfpack.cpp
 		)
 endif (NOT SuiteSparse_FOUND)
