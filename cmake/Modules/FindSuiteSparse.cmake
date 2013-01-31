@@ -107,7 +107,7 @@ if (config_LIBRARY)
   # clock_gettime() which is used by suitesparseconfig
   if ("${CMAKE_SYSTEM_NAME}" MATCHES "Linux")
 	list (APPEND config_LIBRARIES "-lrt")
-  endif ("${CMAKE_SYSTEM_NAME" MATCHES "Linux")
+  endif ("${CMAKE_SYSTEM_NAME}" MATCHES "Linux")
 else (config_LIBRARY)
   set (config_LIBRARIES "")
 endif (config_LIBRARY)
