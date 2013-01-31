@@ -98,7 +98,7 @@ endif (SuiteSparse_EVERYTHING_FOUND)
 # ignore it (older versions don't have a file named like this)
 find_library (config_LIBRARY
   NAMES suitesparseconfig
-  PATHS ${SuiteSparse_SEARCH_LIBS}
+  PATHS ${SuiteSparse_SEARCH_PATH}
   PATH_SUFFIXES ".libs" "lib" "lib32" "lib64" "lib/${CMAKE_LIBRARY_ARCHITECTURE}" "lib/ufsparse"
   )
 if (config_LIBRARY)
